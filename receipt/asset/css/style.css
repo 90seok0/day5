@@ -1,0 +1,382 @@
+/*--- import ---*/
+/*--- reset ---*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, 
+ol,
+li {
+  list-style: none;
+  letter-spacing: -1px;
+  line-height: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+}
+
+.click{
+  text-decoration: underline;
+}
+
+body {
+  width: 100%; 
+  background-color: gainsboro;
+}
+
+.content {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  position: relative;
+  overflow: scroll;
+}
+
+.content::-webkit-scrollbar {
+  display: none; 
+}
+
+/*--- css ---*/
+/* header */
+#header {
+  width: 100%;
+  padding: 40px 20px 8px;
+}
+
+#header .inner {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#header .inner .title {
+  margin-bottom: 10px;
+}
+
+#header .inner .title h1 {
+  color: #000;
+  font: bold 1.7vh/1.2 'courier';
+  text-align: left;
+}
+
+#header .inner .date h2  {
+  font: normal 1.6vh/1 'courier';
+  color: #555;
+  text-align: left;
+}
+
+.date li:nth-of-type(5){
+  margin-top: 20px;
+}
+
+
+/* section */
+#section {
+  width: 100%;
+  padding: 0px 20px;
+}
+
+#section .inner {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/*목록*/
+
+.item {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 10px 0px 0px;
+  border-top: 1.5px dashed #444;
+  border-bottom: 1.5px dashed #444;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.item ul{
+  margin-bottom: 10px;
+  font: normal 1.6vh/1 'courier';
+  color: rgba(35, 35, 35, 0.8);
+}
+
+.item li{
+  line-height: 1rem;
+}
+
+.item .menu{
+  font: bold 1.6vh/1.2 'courier';
+  border-bottom: 1.5px dashed #444;
+  padding-bottom: 5px;
+}
+
+.item .number{
+  width: 30px;
+}
+
+.item .product{
+  width: 230px;
+}
+
+.item .product .inside{
+  padding-left: 10px;
+}
+
+.item .product .inside2{
+   padding-left: 20px;
+}
+
+.item .product .inside3{
+   padding-left: 30px;
+}
+
+.item .price{
+  width: 50px;
+}
+
+.item .count{
+  text-align: right;
+  margin-right: 5px;
+  width: 50px;
+}
+
+.item .money{
+  text-align: right;
+  width: 100px;
+}
+
+
+/*총 가격*/
+.total {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.total ul{
+  font: normal 1.7vh/1 'courier';
+  color: #333;
+}
+
+.total ul:nth-of-type(2){
+  text-align: right;
+}
+
+.total ul>li:nth-of-type(5){
+  font: bold 20px/1 'courier';
+}
+
+.total li{
+  line-height: 1.2rem;
+}
+
+
+/* footer */
+#footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 10px;
+}
+
+#footer .inner {
+  width: 100%;
+}
+
+#footer .inner .barcode {
+  width: 110px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+#footer .inner .barcode::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#footer .inner .barcode span {
+  float: left;
+  display: block;
+  height: 100%;
+  padding: 0;
+}
+
+#footer .inner .barcode span:nth-of-type(1) {
+  width: 3px;
+  background-image: linear-gradient(90deg, rgba(200, 200, 200, 0.8) 40%, black);
+  margin-right: 3px;
+}
+
+#footer .inner .barcode span:nth-of-type(2) {
+  width: 1px;
+  background-color: #333;
+  margin-right: 1px;
+}
+
+#footer .inner .barcode span:nth-of-type(3),
+#footer .inner .barcode span:nth-of-type(4) {
+  width: 5px;
+  background-image: linear-gradient(90deg, rgba(50, 50, 50, 0.9) 30%, black 90%, gainsboro);
+  margin-right: 1px;
+}
+
+#footer .inner span:nth-of-type(5) {
+  width: 1px;
+  background-color: #666;
+  margin-left: 1px;
+}
+
+#footer .inner .barcode span:nth-of-type(6),
+#footer .inner .barcode span:nth-of-type(7) {
+  width: 2px;
+  background-image: linear-gradient(90deg, rgba(200, 200, 200, 0.8) 40%, black);
+  margin-right: 0.5px;
+}
+
+#footer .inner .barcode span:nth-of-type(8) {
+  width: 15px;
+  background-image: linear-gradient(90deg, black 1%, rgba(200, 200, 200, 0.8) 5%,  black 6%, gainsboro 21% , black 22%, white 34%, rgb(33, 33, 33) 35%, black 36%, white 51%, black 52%, rgb(20, 20, 20) 53%);
+  margin-right: 1px;
+}
+
+#footer .inner .barcode span:nth-of-type(9),
+#footer .inner .barcode span:nth-of-type(10),
+#footer .inner .barcode span:nth-of-type(11) {
+  width: 1px;
+  background-color: #222;
+  margin-right: 0.5px;
+}
+
+#footer .inner .barcode span:nth-of-type(12) {
+  width: 8px;
+  background-image: linear-gradient(90deg, rgb(20, 20, 20) 5%, white 6%, black 7%, white 57%, black 58%, gainsboro 77%, rgb(20, 20, 20) 78%, black 79%);
+  margin-right: 2px;
+}
+
+#footer .inner .barcode span:nth-of-type(13),
+#footer .inner .barcode span:nth-of-type(14) {
+  width: 4px;
+  background-image: linear-gradient(90deg, black 10%, white 30%, rgba(200, 200, 200, 0.8) 40%, black 42%);
+  margin-right: 1px;
+}
+
+#footer .inner .barcode span:nth-of-type(15) {
+  width: 0.5px;
+  background-color: #000;
+  margin-right: 3px;
+}
+
+#footer .inner .barcode span:nth-of-type(16),
+#footer .inner .barcode span:nth-of-type(17) {
+  width: 1px;
+  background-color: #000;
+  margin-right: 1px;
+}
+
+#footer .inner .barcode span:nth-of-type(18) {
+  width: 5px;
+  background-image: linear-gradient(90deg, black 70%, white 72%, black 73%, rgba(200, 200, 200, 0.8) 80%, black 82%);
+  margin-right: 0.5px;
+}
+
+#footer .inner .barcode span:nth-of-type(19) {
+  width: 5px;
+  background-image: linear-gradient(90deg, black 10%, white 30%, rgba(200, 200, 200, 0.8) 40%, black 42%);
+  margin-right: 0.5px;
+}
+
+#footer .inner .barcode span:nth-of-type(20) {
+  width: 3px;
+  background-color: #000;
+  margin-right: 2px;
+}
+
+#footer .inner .barcode span:nth-of-type(21),
+#footer .inner .barcode span:nth-of-type(22) {
+  width: 2px;
+  background-image: linear-gradient(90deg, black 45%, white 48%, rgba(200, 200, 200, 0.8) 50%, black 53%);
+  margin-right: 0.5px;
+}
+#footer .inner .barcode span:nth-of-type(23) {
+  width: 10px;
+  background-image: linear-gradient(90deg, black 24%, white 25%, rgba(200, 200, 200, 0.8) 40%, black 42%, white 45%, black 82%, white 83%, black 90%);
+  margin-right: 2px;
+}
+
+#footer .inner .barcode span:nth-of-type(24) {
+  width: 1px;
+  background-color: #000;
+}
+
+
+
+/*--- responsive ---*/
+/*- mobile -*/
+@media screen and (max-width: 600px) {
+  ul{
+    line-height: 1.2rem;
+  }
+
+  .content {
+    width: 380px;
+    height: auto;
+  }
+
+  .item .product{
+    width: 210px;
+  }
+
+
+  #header {
+    padding: 40px 10px 0px;
+  }
+
+  #header .inner .title h1 {
+    font: bold 16px/1.2 'courier';
+  }
+
+  #header .inner .date h2  {
+    font: normal 14px/1 'courier';
+  }
+
+ 
+  #section {
+    padding: 0px 10px 20px;
+  }
+
+
+  .item ul{
+    font: normal 14px/1 'courier';
+  }
+
+  .item .menu{
+    font: bold 14px/1 'courier';
+    padding-bottom: 10px;
+  }
+
+  .item li{
+    margin-bottom: 10px;
+  }
+
+  .total ul{
+    font: normal 14px/1.2 'courier';
+  }
+
+  .total li{
+    margin-bottom: 6px;
+  }
+
+ .total ul>li:nth-of-type(5){
+  font: bold 16px/1 'courier';
+  }
+
+  #footer {
+    padding:30px 10px 60px;
+  }
+}
